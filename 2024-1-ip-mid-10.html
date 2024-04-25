@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .ultop{ overflow: hidden; }
+            .litop{
+            list-style: none;
+            float: left; padding: 15px;
+            }
+            .litop:first-child { border-radius: 10px 0 0 10px; }
+            .litop:last-child { border-radius: 0 10px 10px 0; }
+            .litop:nth-child(2n) { background-color: #FF0003; }
+            .litop:nth-child(2n+1) { background-color: #800000; }
+            </style>
+            <script src="https://code.jquery.com/jquery-3.6.4.js"></script> 
+            <script defer>
+                const array = [
+                    {
+                        id:'news',
+                        content:'뉴스'
+                    },
+                    {
+                        id:'notice',
+                        content:'소식'
+                    },
+                    {
+                        id:'research',
+                        content:'연구'
+                    },
+                    {
+                        id:'service',
+                        content:"서비스"
+                    },
+                    {
+                        id:'sns',
+                        content:'SNS'
+                    }
+                ]
+                window.onload = function(){
+                    const ul = document.getElementById('leftmenu');
+                    let newLI;
+
+                    for(var a of array){
+                        newLI = document.createElement("li");
+                        newLI.className = a.id;
+                        newLI.innerHTML = a.content;
+
+                        ul.appendChild(newLI)
+                    }
+
+
+                    $('#news').mouseover(function(){ 
+                        $('#news').text("뉴스 ◀");
+                    });
+                    $('#news').mouseleave(function(){ 
+                        $('#news').text("뉴스");
+                    });
+                    $('#news').click(function(){
+                        alert($('#news').text())
+                    })
+
+                    $('#notice').mouseover(function(){ 
+                        $('#notice').text("소식 ◀");
+                    });
+                    $('#notice').mouseleave(function(){ 
+                        $('#notice').text("소식");
+                    });
+                    $('#notice').click(function(){
+                        alert($('#notice').text())
+                    })
+
+                    $('#research').mouseover(function(){ 
+                        $('#research').text("연구 ◀");
+                    });
+                    $('#research').mouseleave(function(){ 
+                        $('#research').text("연구");
+                    });
+                    $('#research').click(function(){
+                        alert($('#research').text())
+                    })
+
+                    $('#service').mouseover(function(){ 
+                        $('#service').text("서비스 ◀");
+                    });
+                    $('#service').mouseleave(function(){ 
+                        $('#service').text("서비스");
+                    });
+                    $('#service').click(function(){
+                        alert($('#service').text())
+                    })
+
+                    $('#sns').mouseover(function(){ 
+                        $('#sns').text("SNS ◀");
+                    });
+                    $('#sns').mouseleave(function(){ 
+                        $('#sns').text("SNS");
+                    });
+                    $('#sns').click(function(){
+                        alert($('#sns').text())
+                    })
+                }
+            </script>
+        </head>
+    <body>
+        <div style="width:100%; border: 2px solid; display:flex;">
+            <img src="img/Inha_University_logotype(ko).png"/>
+            <ul class="ultop">
+                <li class="litop">교육</li>
+                <li class="litop">입학/취업</li>
+                <li class="litop">산학/연구</li>
+                <li class="litop">학사</li>
+                <li class="litop">대학생활</li>
+                <li class="litop">인하소식</li>
+                <li class="litop">인하소개</li>
+            </ul>
+        </div>
+        <div style="display:flex; width:100%">
+            <div style="background-color:gray; width:20%">
+                <ul id="leftmenu">
+
+                </ul>
+            </div>
+            <div style="width:80%;">
+                <h1>
+                    창학이념과 교육목표
+                </h1>
+                <h2>
+                    인격도야, 진리탐구, 사회봉사
+                </h2>
+                <h3>
+                    우리 대학교는 1954년 조국부강, 민족번영의 염원으로 개교하여 창의, 근면, 봉사의 창학정신을 구현하기 위한 인격도야, 진리탐구, 사회봉사의 3대교육 이념을 표방하고 있다.
+                </h3>
+                <h3>
+                    이는 교훈 「眞」과 함께 연구하는 대학으로서의 참된 인간 수련을 통하여 국가와 인류사회 발전에 공헌하려는 의욕적 자세와 세계로 웅비하는 발전 「仁荷」의 의지 및 진리 탐구를 위한 학문에의 열정을 집약한 것이다. 위의 이념을 기초로 우리 대학은 인격을 도야하고, 건전한 사상을 함양하는 동시에 심오한 학술이론과 그 응용방법을 연구, 교수하여 국가와 인류사회발전에 공헌할 수 있는 지도적 인재양성을 교육목적으로 두고 있다.
+                </h3>
+            </div>
+        </div>
+    </body>
+</html>
